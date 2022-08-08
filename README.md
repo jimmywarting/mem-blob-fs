@@ -1,8 +1,8 @@
-mem-fs
+mem-blob-fs
 =============
 
-Simple in-memory blob file store.
-similar to `mem-fs` but uses standard web File's instead of vinyl
+Simple in-memory blob file store (similar to `mem-fs` but uses standard web
+File's instead of vinyl)
 
 Usage
 -------------
