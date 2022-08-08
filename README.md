@@ -14,16 +14,21 @@ Usage
 It generally depends on `fetch-blob/from.js` on the NodeJS side
 but it's an optional dependency and also works without it in the browser
 
+The store extends both `Map` and `EventTarget` and has the same functionality.
+Therefore it's perfectly fine to just construct the store with a 2d array of
+[[key, value]] pair.
+
 ```js
 import Store from 'mem-blob-fs'
 import * as fs from 'fetch-blob/from.js'
 
 Store.fs = fs
 
-const store = new Store()
+const store = new Store([
+  ['pkg.json', new File(['things to store'])],
+  ['readme.md', new File(['things to store2'])],
+])
 ```
-
-The store extends both `Map` and `EventTarget` and has the same functionality
 
 ### Loading a file
 
@@ -42,7 +47,7 @@ await file.text()
 ```
 
 When trying to load a file we cannot read from disk, an empty File will be
-instead be returned. The contents of this file will be set to an empty string.
+returned instead. The contents of this file will be set to an empty string.
 
 Trying to get a directory or any invalid files will also return an empty File.
 

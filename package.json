@@ -1,6 +1,6 @@
 {
   "name": "mem-blob-fs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple in-memory blob file store",
   "scripts": {},
   "repository": "jimmywarting/mem-blob-fs",

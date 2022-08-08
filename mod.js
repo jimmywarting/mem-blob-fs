@@ -14,8 +14,8 @@ export default class Store extends Map {
   /** @type {{File: typeof File, fileFromSync}|null} */
   static fs = null
 
-  constructor () {
-    super()
+  constructor (items) {
+    super(items)
 
     const evt = new EventTarget()
     this.addEventListener = evt.addEventListener.bind(evt)
