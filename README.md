@@ -25,8 +25,8 @@ import * as fs from 'fetch-blob/from.js'
 Store.fs = fs
 
 const store = new Store([
-  ['pkg.json', new File(['things to store'])],
-  ['readme.md', new File(['things to store2'])],
+  ['pkg.json', new fs.Blob(['things to store'])],
+  ['readme.md', new fs.Blob(['things to store2'])],
 ])
 ```
 
